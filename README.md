@@ -13,7 +13,7 @@ Classifies text comments into **anger**, **fear** or **joy** using TF-IDF featur
 ## Project Workflow
 
 1. **Preprocessing:** lowercasing, removing URLs, mentions, digits and punctuation, tokenization, stopword removal (negations kept), lemmatization
-2. **Feature extraction:** TF-IDF with unigrams and bigrams (5,718 features)
+2. **Feature extraction:** TF-IDF with unigrams and bigrams
 3. **Models:** Multinomial Naive Bayes and Linear SVM
 4. **Evaluation:** accuracy, macro/weighted F1, classification report, confusion matrices
 
@@ -28,16 +28,8 @@ Preprocessing improved the SVM from 91.9% (raw text) to 94.0% (cleaned text).
 
 **Conclusion:** SVM performs best. Linear SVMs work well on high-dimensional sparse text features, and emotions are largely separable by distinctive keywords.
 
-## How to Run
+   
 
-1. Open `sentiment_analysis_final.ipynb` in Google Colab or Jupyter Notebook.
-2. Run all cells. The first run installs/downloads the required packages and data.
-
-To run locally, install the dependencies first:
-
-```bash
-pip install pandas numpy matplotlib seaborn nltk scikit-learn gdown
-```
 
 ## Files
 
@@ -46,10 +38,13 @@ pip install pandas numpy matplotlib seaborn nltk scikit-learn gdown
 
 ## Limitations
 
-- Bag-of-words ignores word order, sarcasm and context.
-- Only three emotion classes exist, so other emotions (e.g. sadness) get mapped to the closest class.
+- Only three emotion classes exist.
 - Some labels in the dataset appear noisy.
-- Future work: hyper-parameter tuning and transformer models such as BERT.
 
+  
+## How to Run
+
+1. Open `sentiment_analysis_final.ipynb` in Google Colab
 
 Google Colab link: https://colab.research.google.com/drive/1TEGDJpRux2x7kOfVUAYkcy9YF2Y0fqXz?usp=sharing
+
